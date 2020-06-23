@@ -1,0 +1,1042 @@
+<!--
+ * #Descripttion 
+ * #Author leigy<760374213@qq.com>
+ * #Date 2020-05-22 11:29:53
+ * #LastEditors leigy<760374213@qq.com>
+ * #LastEditTime 2020-05-22 11:30:00
+ * #Tip 版权所有： 中科空间信息（廊坊）研究院
+ * 注意：本内容仅限于中科空间信息（廊坊）研究院内部传阅，禁止外泄以及用于其他的商业目的。
+-->
+<!-- 2020-5-11 08:31:30 | 版权所有 火星科技 http://marsgis.cn -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1,maximum-scale=1"
+        />
+        <meta
+            name="author"
+            content="&#x706B;&#x661F;&#x79D1;&#x6280; http://cesium.marsgis.cn "
+        />
+        <meta name="apple-touch-fullscreen" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="x5-fullscreen" content="true" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+        <meta
+            name="keywords"
+            content="&#x706B;&#x661F;&#x79D1;&#x6280;,cesium,3D,GIS,marsgis,&#x4E09;&#x7EF4;,&#x5730;&#x7403;,&#x5730;&#x56FE;,&#x5F00;&#x53D1;,&#x6846;&#x67B6;,&#x7CFB;&#x7EDF;,&#x793A;&#x4F8B;,&#x8D44;&#x6599;,&#x6A21;&#x578B;,&#x79BB;&#x7EBF;,&#x5916;&#x5305;,&#x5408;&#x80A5;,&#x5B89;&#x5FBD;,&#x4E2D;&#x56FD;"
+        />
+        <meta
+            name="description"
+            content="&#x706B;&#x661F;&#x79D1;&#x6280; &#x5408;&#x80A5;&#x706B;&#x661F; &#x5408;&#x80A5;&#x706B;&#x661F;&#x79D1;&#x6280; &#x5408;&#x80A5;&#x706B;&#x661F;&#x79D1;&#x6280;&#x6709;&#x9650;&#x516C;&#x53F8; leaflet leaflet&#x6846;&#x67B6; leaflet&#x5F00;&#x53D1; cesium cesium&#x5F00;&#x53D1; cesium&#x6846;&#x67B6; &#x4E09;&#x7EF4; &#x5730;&#x7403; &#x6A21;&#x578B;  gis marsgis &#x5730;&#x56FE;&#x79BB;&#x7EBF; &#x5730;&#x56FE;&#x5F00;&#x53D1; &#x5730;&#x56FE;&#x6846;&#x67B6; &#x5730;&#x56FE;&#x5916;&#x5305; &#x6846;&#x67B6; &#x5F00;&#x53D1; &#x5916;&#x5305;  &#x5730;&#x56FE;&#x79BB;&#x7EBF; &#x4E8C;&#x7EF4;&#x5730;&#x56FE; &#x4E09;&#x7EF4;&#x5730;&#x56FE; &#x5168;&#x666F;&#x6F2B;&#x6E38; &#x5730;&#x7406;&#x4FE1;&#x606F;&#x7CFB;&#x7EDF; &#x4E91;GIS &#x4E09;&#x7EF4;GIS GIS&#x5E73;&#x53F0; WebGIS"
+        />
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="http://cesium.marsgis.cn/favicon.ico"
+        />
+        <title>
+            &#x4E09;&#x7EF4;&#x5730;&#x56FE; |Mars3D ( MarsGIS for Cesium
+            )|&#x4E09;&#x7EF4;&#x5730;&#x56FE;|
+            &#x706B;&#x661F;&#x79D1;&#x6280;|&#x5408;&#x80A5;&#x706B;&#x661F;&#x79D1;&#x6280;|&#x5408;&#x80A5;&#x706B;&#x661F;&#x79D1;&#x6280;&#x6709;&#x9650;&#x516C;&#x53F8;
+        </title>
+        <script
+            src="../lib/include-lib.js"
+            libpath="../lib/"
+            include="jquery,font-awesome,bootstrap,layer,haoutil,turf,mars3d"
+        ></script>
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+
+    <body class="dark">
+        <div id="mask" class="signmask" onclick="removeMask()"></div>
+        <div id="cesiumContainer" class="mars3d-container"></div>
+        <script>
+            var _0x1b2e = [
+                'YXJyRW50aXR5',
+                'Q2FydGVzaWFuMw==',
+                'cVVES3I=',
+                'T3RyY0k=',
+                'Y29uZmlnL2NvbmZpZy5qc29u',
+                'Zmx5U3BlZWQ=',
+                'bWFycw==',
+                'Q3hnV0g=',
+                'Z1l3bFo=',
+                'bXFBakE=',
+                'b3Blbg==',
+                'YXJyTGluZVBvaW50',
+                'aGVpZ2h0',
+                'V3BXcXY=',
+                'ZWZWTHQ=',
+                'R1VCQXo=',
+                'bXFqbGs=',
+                'bFVRemw=',
+                'ZGRuSEk=',
+                'YWN0aXZhdGU=',
+                'aHR0cDovL2RhdGEubWFyc2dpcy5jbi9nbHRmL21hcnMvd3JqLmdsYg==',
+                'QmNVU0Y=',
+                'Y1FlSXo=',
+                'aGdTSnQ=',
+                'ZnJhbWVOdW0=',
+                'c3VidHJhY3Q=',
+                '5peg5Lq65py66Iiq5ouN',
+                'Zmx5TGluZQ==',
+                'Z2V0UG9pbnQ=',
+                'ZnJvbUNhcnRlc2lhbg==',
+                'YXJyQ29sb3I=',
+                'TFRpQkY=',
+                'bmVnYXRl',
+                '57O757uf5qOA5rWL5Yiw5oKo5L2/55So55qE5rWP6KeI5Zmo5LiN5pSv5oyBV2ViR0zlip/og70=',
+                'ZnJvbUNvbG9y',
+                'YXJyNExpbmVQcmltaXRpdmU=',
+                'c3lqV2Q=',
+                'Tm9xQWw=',
+                'Tktpa3I=',
+                'dXRpbA==',
+                'a0lmREE=',
+                'cHNOdW0=',
+                'Y2VzaXVtQ29udGFpbmVy',
+                'VXZWcFM=',
+                'TWF0cml4Mw==',
+                'c3lzdGVt',
+                'b1d0enk=',
+                'Y2VudGVyQXRBcnI=',
+                'WHp3TG0=',
+                'UmF5',
+                'SUljTkI=',
+                'cXZ1REs=',
+                'ZW50aXRpZXM=',
+                'Zmxvb3I=',
+                'cG9zaXRpb24=',
+                'SVllSHo=',
+                'I21hc2s=',
+                'Y29uZmln',
+                'UGVyc3BlY3RpdmVGcnVzdHVt',
+                'bm9ybWFsaXpl',
+                'Y3JlYXRlUG9seWdvbg==',
+                'dGFu',
+                'c2NlbmU=',
+                'S0ZNRU4=',
+                'c2hpZnQ=',
+                'aWlNaWc=',
+                'Unl0S0c=',
+                'VWd5V1g=',
+                'eWhza0I=',
+                'c2V0Q29sdW1u',
+                'b25UaWNr',
+                'Y2xvY2s=',
+                'UXVhdGVybmlvbg==',
+                'cEhoYnc=',
+                'Y3JlYXRlNExpbmU=',
+                'MjAwcHg=',
+                'PGRpdiBzdHlsZT0ibWFyZ2luOiAyMHB4OyI+PGgzPuezu+e7n+ajgOa1i+WIsOaCqOS9v+eUqOeahOa1j+iniOWZqOS4jeaUr+aMgVdlYkdM5Yqf6IO977yBPC9oMz4gIDxwPjHjgIHor7fmgqjmo4Dmn6XmtY/op4jlmajniYjmnKzvvIzlronoo4Xkvb/nlKjmnIDmlrDniYhjaHJvbWXjgIHngavni5DmiJZJRTEx5Lul5LiK5rWP6KeI5Zmo77yBPC9wPiA8cD4y44CBV2ViR0zmlK/mjIHlj5blhrPkuo5HUFXmlK/mjIHvvIzor7fkv53or4HlrqLmiLfnq6/nlLXohJHlt7Llronoo4XmmL7ljaHpqbHliqjnqIvluo/vvIE8L3A+PC9kaXY+',
+                'YWRk',
+                'cHVzaA==',
+                'c3FydA==',
+                'c3RvcA==',
+                'Q29sb3I=',
+                'eFF3dkc=',
+                'YWRkUG9seWdvbg==',
+                'dE1ZSHM=',
+                'Uk1uemo=',
+                'SWtjTFo=',
+                'Y2xvY2tfb25UaWNr',
+                'ZnJ1c3R1bQ==',
+                'cmVhZHk=',
+                'QVFpSkE=',
+                'c3BsaXQ=',
+                'bGVuZ3Ro',
+                'UXFzdUs=',
+                'TWF0aA==',
+                'cmVtb3Zl',
+                'cHJpbWl0aXZlcw==',
+                'UHBSanA=',
+                'UHJpbWl0aXZl',
+                'Z2V0UmVxdWVzdEJ5TmFtZQ==',
+                'Y3Jvc3M=',
+                'YWRkUG9seWxpbmU=',
+                'Y3JlYXRlTWFw',
+                'dE5jV24=',
+                'UXR0c3E=',
+                'ZHJhdw==',
+                'cmVtb3ZlRXZlbnRMaXN0ZW5lcg==',
+                '5b2T5YmN5rWP6KeI5Zmo5LiN5pSv5oyBV2ViR0zlip/og70=',
+                'ZGlyZWN0aW9u',
+                'Z1NTbEI=',
+                'I2ZmZmYwMA==',
+                'd2ViZ2xyZXBvcnQ=',
+            ]
+            !(function (e, x) {
+                !(function (x) {
+                    for (; --x; ) e.push(e.shift())
+                })(252)
+            })(_0x1b2e)
+            var viewer,
+                _0x45fb = function (x, e) {
+                    var i = _0x1b2e[(x -= 0)]
+                    void 0 === _0x45fb.GPQDtc &&
+                        (!(function () {
+                            var e
+                            try {
+                                e = Function(
+                                    'return (function() {}.constructor("return this")( ));'
+                                )()
+                            } catch (x) {
+                                e = window
+                            }
+                            e.atob ||
+                                (e.atob = function (x) {
+                                    for (
+                                        var e,
+                                            i,
+                                            n = String(x).replace(/=+$/, ''),
+                                            t = '',
+                                            f = 0,
+                                            r = 0;
+                                        (i = n.charAt(r++));
+                                        ~i &&
+                                        ((e = f % 4 ? 64 * e + i : i), f++ % 4)
+                                            ? (t += String.fromCharCode(
+                                                  255 & (e >> ((-2 * f) & 6))
+                                              ))
+                                            : 0
+                                    )
+                                        i = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='.indexOf(
+                                            i
+                                        )
+                                    return t
+                                })
+                        })(),
+                        (_0x45fb.xxySkK = function (x) {
+                            for (
+                                var e = atob(x), i = [], n = 0, t = e.length;
+                                n < t;
+                                n++
+                            )
+                                i +=
+                                    '%' +
+                                    ('00' + e.charCodeAt(n).toString(16)).slice(
+                                        -2
+                                    )
+                            return decodeURIComponent(i)
+                        }),
+                        (_0x45fb.ViNzwJ = {}),
+                        (_0x45fb.GPQDtc = !0))
+                    var n = _0x45fb.ViNzwJ[x]
+                    return (
+                        void 0 === n
+                            ? ((i = _0x45fb.xxySkK(i)), (_0x45fb.ViNzwJ[x] = i))
+                            : (i = n),
+                        i
+                    )
+                }
+            function removeMask() {
+                var x = {
+                    WpWqv: function (x, e) {
+                        return x(e)
+                    },
+                    eIFJF: _0x45fb('0x1d'),
+                }
+                x[_0x45fb('0x62')]($, x.eIFJF).remove()
+            }
+            function initMap() {
+                var i = {
+                        CxgWH: function (x, e, i) {
+                            return x(e, i)
+                        },
+                        RFBHz: function (x) {
+                            return x()
+                        },
+                        SBtdM: function (x, e) {
+                            return x !== e
+                        },
+                        LpiCz: _0x45fb('0x9'),
+                        GUBAz: function (x) {
+                            return x()
+                        },
+                        QQBtc: _0x45fb('0x59'),
+                    },
+                    x = haoutil[_0x45fb('0x12')][_0x45fb('0x48')](
+                        _0x45fb('0x1e'),
+                        i.QQBtc
+                    )
+                mars3d[_0x45fb('0x4b')]({
+                    id: _0x45fb('0xf'),
+                    url: x,
+                    terrain: !1,
+                    center: {
+                        y: 31.30003,
+                        x: 116.08603,
+                        z: 11445.39,
+                        heading: 51.4,
+                        pitch: -86.6,
+                        roll: 2.3,
+                    },
+                    success: function (x, e) {
+                        i.SBtdM(i.LpiCz, i.LpiCz)
+                            ? ((viewer = x),
+                              i[_0x45fb('0x5c')](setTimeout, removeMask, 3e3),
+                              i.RFBHz(initWork))
+                            : ((viewer = x),
+                              setTimeout(removeMask, 3e3),
+                              i[_0x45fb('0x64')](initWork))
+                    },
+                })
+            }
+            function initWork() {
+                var x = [
+                        [116.069898, 31.303655],
+                        [116.098708, 31.322126],
+                        [116.108063, 31.311256],
+                        [116.079317, 31.292959],
+                        [116.069898, 31.303655],
+                    ],
+                    e =
+                        (viewer[_0x45fb('0x5b')].draw[_0x45fb('0x4a')](x, {
+                            width: 3,
+                            color: { IkcLZ: '#00ff00' }[_0x45fb('0x3b')],
+                        }),
+                        viewer[_0x45fb('0x5b')][_0x45fb('0x4e')][
+                            _0x45fb('0x38')
+                        ](x))
+                mars3d.util.highlightEntity(e, {
+                    time: 8,
+                    onEnd: function () {
+                        viewer[_0x45fb('0x5b')].draw.remove(e),
+                            work4HP[_0x45fb('0x68')]()
+                    },
+                })
+            }
+            $(document)[_0x45fb('0x3e')](function () {
+                var x = {
+                    tMYHs: function (x, e) {
+                        return x(e)
+                    },
+                    iiMig: _0x45fb('0x50'),
+                    KFMEN: _0x45fb('0x30'),
+                    ddnHI: _0x45fb('0x31'),
+                }
+                mars3d[_0x45fb('0xc')][_0x45fb('0x54')]() ||
+                    (x[_0x45fb('0x39')](alert, _0x45fb('0x6')),
+                    layer[_0x45fb('0x5f')]({
+                        type: 1,
+                        title: x[_0x45fb('0x26')],
+                        closeBtn: 0,
+                        shadeClose: !1,
+                        resize: !1,
+                        area: ['600px', x[_0x45fb('0x24')]],
+                        content: x[_0x45fb('0x67')],
+                    })),
+                    initMap()
+            })
+            var work4HP = {
+                flySpeed: 600,
+                psNum: 400,
+                frameNum: 0,
+                arr4LinePrimitive: [],
+                arrEntity: [],
+                arrColor: [
+                    new Cesium[_0x45fb('0x36')](1, 0, 0, 0.3),
+                    new Cesium[_0x45fb('0x36')](0, 1, 0, 0.3),
+                    new Cesium.Color(0, 0, 1, 0.3),
+                ],
+                activate: function () {
+                    var x = { nvZFj: _0x45fb('0x6f'), yhskB: _0x45fb('0x69') }
+                    ;(this[_0x45fb('0x0')] = new mars3d.FlyLine(viewer, {
+                        name: x.nvZFj,
+                        clockRange: !0,
+                        interpolation: !1,
+                        clampToGround: !1,
+                        showGroundHeight: !1,
+                        camera: { type: '' },
+                        speed: this[_0x45fb('0x5a')],
+                        points: [
+                            [116.077374, 31.294215, 1e3],
+                            [116.107153, 31.312963, 1e3],
+                            [116.103816, 31.316868, 1e3],
+                            [116.074092, 31.297972, 1e3],
+                            [116.07068, 31.301908, 1e3],
+                            [116.100465, 31.320893, 1e3],
+                        ],
+                        model: {
+                            show: !0,
+                            uri: x[_0x45fb('0x29')],
+                            scale: 0.02,
+                            minimumPixelSize: 50,
+                        },
+                        path: {
+                            color: _0x45fb('0x53'),
+                            width: 3,
+                            show: !0,
+                            isAll: !1,
+                        },
+                    })),
+                        this[_0x45fb('0x0')].start(),
+                        viewer[_0x45fb('0x5b')][_0x45fb('0x14')]([
+                            {
+                                y: 31.261244,
+                                x: 116.087805,
+                                z: 4571.19,
+                                heading: 2.3,
+                                pitch: -45.4,
+                                roll: 357.6,
+                                stop: 4,
+                            },
+                            {
+                                y: 31.299649,
+                                x: 116.129938,
+                                z: 2725.83,
+                                heading: 290.2,
+                                pitch: -34,
+                                roll: 358.1,
+                                stop: 4,
+                            },
+                            {
+                                y: 31.288891,
+                                x: 116.106146,
+                                z: 4268.26,
+                                heading: 325.4,
+                                pitch: -55.7,
+                                roll: 357.5,
+                            },
+                        ]),
+                        viewer.clock[_0x45fb('0x2b')].addEventListener(
+                            this.clock_onTick,
+                            this
+                        )
+                },
+                clock_onTick: function () {
+                    var x = {
+                        gSSlB: function (x, e) {
+                            return x == e
+                        },
+                        pHhbw: function (x, e) {
+                            return x % e
+                        },
+                        QCQbi: function (x, e) {
+                            return x / e
+                        },
+                        Qttsq: function (x, e) {
+                            return x / e
+                        },
+                        qvuDK: function (x, e) {
+                            return x == e
+                        },
+                        NxGHO: function (x, e) {
+                            return x(e)
+                        },
+                        tNcWn: _0x45fb('0x1d'),
+                        cQeIz: function (x, e) {
+                            return x + e
+                        },
+                        gYwlZ: function (x, e) {
+                            return x === e
+                        },
+                        IIcNB: _0x45fb('0x15'),
+                        mqjlk: function (x, e) {
+                            return x == e
+                        },
+                        OtrcI: function (x, e) {
+                            return x / e
+                        },
+                        LTiBF: function (x, e) {
+                            return x !== e
+                        },
+                        RytKG: 'nwmHR',
+                        lUQzl: _0x45fb('0x3f'),
+                        UvVpS: function (x, e) {
+                            return x / e
+                        },
+                        efVLt: function (x, e) {
+                            return x == e
+                        },
+                    }
+                    if (viewer[_0x45fb('0x2c')].shouldAnimate) {
+                        this[_0x45fb('0x6d')]++
+                        var e,
+                            i,
+                            n = this[_0x45fb('0x0')].indexForFlyOK,
+                            t = new Cesium[_0x45fb('0x56')]()
+                        if (
+                            ((i =
+                                0 != n && n
+                                    ? ((e = this[_0x45fb('0x0')][
+                                          _0x45fb('0x60')
+                                      ][x[_0x45fb('0x6b')](n, 1)]),
+                                      this[_0x45fb('0x0')].arrLinePoint[n])
+                                    : ((e = this.flyLine[_0x45fb('0x60')][0]),
+                                      this[_0x45fb('0x0')][
+                                          _0x45fb('0x60')
+                                      ][1])),
+                            e && i)
+                        ) {
+                            Cesium[_0x45fb('0x56')].normalize(
+                                Cesium[_0x45fb('0x56')][_0x45fb('0x6e')](
+                                    i,
+                                    e,
+                                    t
+                                ),
+                                t
+                            )
+                            var f = Cesium[_0x45fb('0x43')].toRadians(35)
+                            if (n % 2 == 0)
+                                if (
+                                    x[_0x45fb('0x5d')](
+                                        x[_0x45fb('0x17')],
+                                        x[_0x45fb('0x17')]
+                                    )
+                                ) {
+                                    if (
+                                        x[_0x45fb('0x65')](
+                                            this[_0x45fb('0x6d')] %
+                                                Math[_0x45fb('0x1a')](
+                                                    x[_0x45fb('0x58')](
+                                                        this[_0x45fb('0xe')],
+                                                        x[_0x45fb('0x58')](
+                                                            this.flySpeed,
+                                                            100
+                                                        )
+                                                    )
+                                                ),
+                                            0
+                                        )
+                                    )
+                                        if (
+                                            x[_0x45fb('0x4')](
+                                                x[_0x45fb('0x27')],
+                                                x[_0x45fb('0x66')]
+                                            )
+                                        ) {
+                                            var r = this[_0x45fb('0x2f')](
+                                                this.flyLine[_0x45fb('0x1b')],
+                                                t,
+                                                f,
+                                                1.2
+                                            )
+                                            viewer.scene[_0x45fb('0x45')].add(
+                                                r
+                                            ),
+                                                this[_0x45fb('0x8')][
+                                                    _0x45fb('0x33')
+                                                ](r)
+                                        } else {
+                                            if (
+                                                x[_0x45fb('0x52')](
+                                                    x[_0x45fb('0x2e')](
+                                                        this[_0x45fb('0x6d')],
+                                                        Math.floor(
+                                                            x.QCQbi(
+                                                                this[
+                                                                    _0x45fb(
+                                                                        '0xe'
+                                                                    )
+                                                                ],
+                                                                x[
+                                                                    _0x45fb(
+                                                                        '0x4d'
+                                                                    )
+                                                                ](
+                                                                    this[
+                                                                        _0x45fb(
+                                                                            '0x5a'
+                                                                        )
+                                                                    ],
+                                                                    100
+                                                                )
+                                                            )
+                                                        )
+                                                    ),
+                                                    0
+                                                )
+                                            ) {
+                                                var b = this[_0x45fb('0x2f')](
+                                                    this[_0x45fb('0x0')][
+                                                        _0x45fb('0x1b')
+                                                    ],
+                                                    t,
+                                                    f,
+                                                    1.2
+                                                )
+                                                viewer[_0x45fb('0x23')][
+                                                    _0x45fb('0x45')
+                                                ].add(b),
+                                                    this.arr4LinePrimitive[
+                                                        _0x45fb('0x33')
+                                                    ](b)
+                                            }
+                                            x[_0x45fb('0x18')](
+                                                this[_0x45fb('0x6d')] %
+                                                    Math[_0x45fb('0x1a')](
+                                                        this.psNum /
+                                                            (this[
+                                                                _0x45fb('0x5a')
+                                                            ] /
+                                                                100)
+                                                    ),
+                                                10
+                                            ) &&
+                                                this[_0x45fb('0x8')][0] &&
+                                                viewer.scene[
+                                                    _0x45fb('0x45')
+                                                ].remove(
+                                                    this[_0x45fb('0x8')][
+                                                        _0x45fb('0x25')
+                                                    ]()
+                                                )
+                                        }
+                                    x.mqjlk(
+                                        x[_0x45fb('0x2e')](
+                                            this.frameNum,
+                                            Math.floor(
+                                                x[_0x45fb('0x10')](
+                                                    this[_0x45fb('0xe')],
+                                                    x[_0x45fb('0x10')](
+                                                        this.flySpeed,
+                                                        100
+                                                    )
+                                                )
+                                            )
+                                        ),
+                                        10
+                                    ) &&
+                                        this[_0x45fb('0x8')][0] &&
+                                        viewer[_0x45fb('0x23')][
+                                            _0x45fb('0x45')
+                                        ][_0x45fb('0x44')](
+                                            this.arr4LinePrimitive[
+                                                _0x45fb('0x25')
+                                            ]()
+                                        )
+                                } else
+                                    x.NxGHO($, x[_0x45fb('0x4c')])[
+                                        _0x45fb('0x44')
+                                    ]()
+                            0 ==
+                                x[_0x45fb('0x2e')](
+                                    this.frameNum,
+                                    Math[_0x45fb('0x1a')](
+                                        x.UvVpS(
+                                            this[_0x45fb('0xe')],
+                                            x[_0x45fb('0x10')](
+                                                this[_0x45fb('0x5a')],
+                                                100
+                                            )
+                                        )
+                                    )
+                                ) &&
+                                x[_0x45fb('0x63')](
+                                    x[_0x45fb('0x2e')](n, 2),
+                                    0
+                                ) &&
+                                this[_0x45fb('0x21')](
+                                    this[_0x45fb('0x0')][_0x45fb('0x1b')],
+                                    t,
+                                    f,
+                                    1.2
+                                )
+                        }
+                    }
+                },
+                create4Line: function (x, e, i, n) {
+                    for (
+                        var t = {
+                                oWtzy:
+                                    '8|16|11|1|10|6|15|12|14|17|13|3|5|0|4|7|9|2|18',
+                                kIfDA: _0x45fb('0x3d'),
+                            },
+                            f = t[_0x45fb('0x13')][_0x45fb('0x40')]('|'),
+                            r = 0;
+                        ;
+
+                    ) {
+                        switch (f[r++]) {
+                            case '0':
+                                Cesium[_0x45fb('0x11')].setColumn(c, 1, s, c)
+                                continue
+                            case '1':
+                                var b = {
+                                    position: x,
+                                    direction: u,
+                                    up: e,
+                                    right: C,
+                                    height: l,
+                                }
+                                continue
+                            case '2':
+                                var a = new Cesium[_0x45fb('0x47')]({
+                                    geometryInstances: new Cesium.GeometryInstance(
+                                        {
+                                            geometry: new Cesium.FrustumOutlineGeometry(
+                                                {
+                                                    frustum: _,
+                                                    origin: x,
+                                                    orientation: o,
+                                                }
+                                            ),
+                                            attributes: {
+                                                color: Cesium.ColorGeometryInstanceAttribute[
+                                                    _0x45fb('0x7')
+                                                ](
+                                                    new Cesium[_0x45fb('0x36')](
+                                                        1,
+                                                        10,
+                                                        0,
+                                                        1
+                                                    )
+                                                ),
+                                            },
+                                            id: t[_0x45fb('0xd')],
+                                        }
+                                    ),
+                                    appearance: new Cesium.PerInstanceColorAppearance(
+                                        { flat: !0 }
+                                    ),
+                                })
+                                continue
+                            case '3':
+                                var c = h
+                                continue
+                            case '4':
+                                Cesium[_0x45fb('0x11')][_0x45fb('0x2a')](
+                                    c,
+                                    2,
+                                    m,
+                                    c
+                                )
+                                continue
+                            case '5':
+                                Cesium[_0x45fb('0x11')][_0x45fb('0x2a')](
+                                    c,
+                                    0,
+                                    d,
+                                    c
+                                )
+                                continue
+                            case '6':
+                                var s = b.up
+                                continue
+                            case '7':
+                                var o = Cesium[
+                                    _0x45fb('0x2d')
+                                ].fromRotationMatrix(c, w)
+                                continue
+                            case '8':
+                                var u = Cesium[_0x45fb('0x56')].normalize(
+                                    Cesium[_0x45fb('0x56')][_0x45fb('0x5')](
+                                        x,
+                                        new Cesium.Cartesian3()
+                                    ),
+                                    new Cesium[_0x45fb('0x56')]()
+                                )
+                                continue
+                            case '9':
+                                var _ = new Cesium[_0x45fb('0x1f')]({
+                                    fov: i,
+                                    aspectRatio: n,
+                                    near: 0.1,
+                                    far: l,
+                                })
+                                continue
+                            case '10':
+                                var m = b[_0x45fb('0x51')]
+                                continue
+                            case '11':
+                                var l = Cesium.Cartographic[_0x45fb('0x2')](x)[
+                                    _0x45fb('0x61')
+                                ]
+                                continue
+                            case '12':
+                                var v = new Cesium[_0x45fb('0x56')]()
+                                continue
+                            case '13':
+                                d = Cesium[_0x45fb('0x56')].negate(d, v)
+                                continue
+                            case '14':
+                                var h = new Cesium[_0x45fb('0x11')]()
+                                continue
+                            case '15':
+                                var d = b.right
+                                continue
+                            case '16':
+                                var C = Cesium[_0x45fb('0x56')].cross(
+                                    u,
+                                    e,
+                                    new Cesium[_0x45fb('0x56')]()
+                                )
+                                continue
+                            case '17':
+                                var w = new Cesium.Quaternion()
+                                continue
+                            case '18':
+                                return a
+                        }
+                        break
+                    }
+                },
+                getExtentPoint: function (x, e, i, n) {
+                    for (
+                        var t = {
+                                IYeHz:
+                                    '15|8|7|25|14|13|27|17|1|21|26|19|18|4|23|11|24|5|9|0|6|10|12|20|16|22|2|3',
+                                hgSJt: function (x, e) {
+                                    return x / e
+                                },
+                                qUDKr: function (x, e) {
+                                    return x * e
+                                },
+                                BcUSF: function (x, e) {
+                                    return x + e
+                                },
+                            },
+                            f = t[_0x45fb('0x1c')][_0x45fb('0x40')]('|'),
+                            r = 0;
+                        ;
+
+                    ) {
+                        switch (f[r++]) {
+                            case '0':
+                                var b = new Cesium[_0x45fb('0x56')]()
+                                continue
+                            case '1':
+                                var a = t[_0x45fb('0x6c')](w, n)
+                                continue
+                            case '2':
+                                Cesium.Ray[_0x45fb('0x1')](g, Z, V)
+                                continue
+                            case '3':
+                                return [b, V, k, l]
+                            case '4':
+                                var c = new Cesium[_0x45fb('0x16')](p, e)
+                                continue
+                            case '5':
+                                var s = new Cesium[_0x45fb('0x16')](p, W)
+                                continue
+                            case '6':
+                                var o = Cesium[_0x45fb('0x56')].normalize(
+                                    Cesium.Cartesian3[_0x45fb('0x6e')](
+                                        h,
+                                        k,
+                                        new Cesium[_0x45fb('0x56')]()
+                                    ),
+                                    new Cesium[_0x45fb('0x56')]()
+                                )
+                                continue
+                            case '7':
+                                var u = Cesium.Cartographic.fromCartesian(x)[
+                                    _0x45fb('0x61')
+                                ]
+                                continue
+                            case '8':
+                                var _ = Cesium.Cartesian3[_0x45fb('0x49')](
+                                    d,
+                                    e,
+                                    new Cesium[_0x45fb('0x56')]()
+                                )
+                                continue
+                            case '9':
+                                Cesium[_0x45fb('0x16')].getPoint(s, a, l)
+                                continue
+                            case '10':
+                                var m = new Cesium[_0x45fb('0x16')](h, o)
+                                continue
+                            case '11':
+                                var l = new Cesium.Cartesian3()
+                                continue
+                            case '12':
+                                Cesium[_0x45fb('0x16')].getPoint(m, Z, b)
+                                continue
+                            case '13':
+                                var v = t[_0x45fb('0x6c')](i, 2)
+                                continue
+                            case '14':
+                                var h = Cesium[_0x45fb('0x16')][_0x45fb('0x1')](
+                                    R,
+                                    u,
+                                    new Cesium[_0x45fb('0x56')]()
+                                )
+                                continue
+                            case '15':
+                                var d = Cesium[_0x45fb('0x56')].normalize(
+                                    Cesium[_0x45fb('0x56')].negate(
+                                        x,
+                                        new Cesium[_0x45fb('0x56')]()
+                                    ),
+                                    new Cesium[_0x45fb('0x56')]()
+                                )
+                                continue
+                            case '16':
+                                var C = Cesium[_0x45fb('0x56')][
+                                    _0x45fb('0x20')
+                                ](
+                                    Cesium.Cartesian3[_0x45fb('0x6e')](
+                                        h,
+                                        l,
+                                        new Cesium[_0x45fb('0x56')]()
+                                    ),
+                                    new Cesium.Cartesian3()
+                                )
+                                continue
+                            case '17':
+                                var w = t[_0x45fb('0x57')](u, z)
+                                continue
+                            case '18':
+                                var p = Cesium[_0x45fb('0x16')][_0x45fb('0x1')](
+                                    y,
+                                    w,
+                                    new Cesium.Cartesian3()
+                                )
+                                continue
+                            case '19':
+                                var y = new Cesium[_0x45fb('0x16')](h, _)
+                                continue
+                            case '20':
+                                var V = new Cesium[_0x45fb('0x56')]()
+                                continue
+                            case '21':
+                                var Z = Math[_0x45fb('0x34')](
+                                    t[_0x45fb('0x6a')](
+                                        w * w,
+                                        t[_0x45fb('0x57')](a, a)
+                                    )
+                                )
+                                continue
+                            case '22':
+                                var g = new Cesium[_0x45fb('0x16')](h, C)
+                                continue
+                            case '23':
+                                Cesium[_0x45fb('0x16')][_0x45fb('0x1')](c, a, k)
+                                continue
+                            case '24':
+                                var W = Cesium[_0x45fb('0x56')][_0x45fb('0x5')](
+                                    e,
+                                    new Cesium[_0x45fb('0x56')]()
+                                )
+                                continue
+                            case '25':
+                                var R = new Cesium[_0x45fb('0x16')](x, d)
+                                continue
+                            case '26':
+                                var k = new Cesium[_0x45fb('0x56')]()
+                                continue
+                            case '27':
+                                var z = Math[_0x45fb('0x22')](v)
+                                continue
+                        }
+                        break
+                    }
+                },
+                createPolygon: function (x, e, i, n) {
+                    var t = this.getExtentPoint(x, e, i, n),
+                        f = viewer.entities[_0x45fb('0x32')]({
+                            polygon: {
+                                hierarchy: t,
+                                material: this.arrColor[
+                                    {
+                                        UgyWX: function (x, e) {
+                                            return x % e
+                                        },
+                                    }[_0x45fb('0x28')](
+                                        this[_0x45fb('0x55')][_0x45fb('0x41')],
+                                        this[_0x45fb('0x3')].length
+                                    )
+                                ],
+                                zIndex: this.arrEntity[_0x45fb('0x41')],
+                            },
+                        })
+                    this[_0x45fb('0x55')][_0x45fb('0x33')](f)
+                },
+                disable: function () {
+                    var e = {
+                        iVTZJ: function (x) {
+                            return x()
+                        },
+                        mqAjA: function (x, e) {
+                            return x < e
+                        },
+                        RMnzj: function (x, e) {
+                            return x !== e
+                        },
+                        NKikr: _0x45fb('0x46'),
+                    }
+                    viewer[_0x45fb('0x2c')][_0x45fb('0x2b')][_0x45fb('0x4f')](
+                        this[_0x45fb('0x3c')],
+                        this
+                    ),
+                        this[_0x45fb('0x0')][_0x45fb('0x35')]()
+                    for (
+                        var x = 0;
+                        e[_0x45fb('0x5e')](
+                            x,
+                            this[_0x45fb('0x55')][_0x45fb('0x41')]
+                        );
+                        x++
+                    )
+                        viewer[_0x45fb('0x19')][_0x45fb('0x44')](
+                            this.arrEntity[x]
+                        )
+                    this[_0x45fb('0x55')] = []
+                    for (
+                        x = 0;
+                        e[_0x45fb('0x5e')](
+                            x,
+                            this[_0x45fb('0x8')][_0x45fb('0x41')]
+                        );
+                        x++
+                    )
+                        if (
+                            e[_0x45fb('0x3a')](
+                                _0x45fb('0x42'),
+                                e[_0x45fb('0xb')]
+                            )
+                        )
+                            viewer[_0x45fb('0x23')][_0x45fb('0x45')][
+                                _0x45fb('0x44')
+                            ](this.arr4LinePrimitive[x])
+                        else {
+                            var i = {
+                                    NoqAl: function (x, e, i) {
+                                        return x(e, i)
+                                    },
+                                    xQwvG: function (x) {
+                                        return e.iVTZJ(x)
+                                    },
+                                },
+                                n = haoutil.system[_0x45fb('0x48')](
+                                    _0x45fb('0x1e'),
+                                    _0x45fb('0x59')
+                                )
+                            mars3d.createMap({
+                                id: _0x45fb('0xf'),
+                                url: n,
+                                terrain: !1,
+                                center: {
+                                    y: 31.30003,
+                                    x: 116.08603,
+                                    z: 11445.39,
+                                    heading: 51.4,
+                                    pitch: -86.6,
+                                    roll: 2.3,
+                                },
+                                success: function (x, e) {
+                                    ;(viewer = x),
+                                        i[_0x45fb('0xa')](
+                                            setTimeout,
+                                            removeMask,
+                                            3e3
+                                        ),
+                                        i[_0x45fb('0x37')](initWork)
+                                },
+                            })
+                        }
+                    ;(this[_0x45fb('0x8')] = []),
+                        (this.frameNum = 0),
+                        (this.lengthArr = [])
+                },
+            }
+        </script>
+    </body>
+</html>
