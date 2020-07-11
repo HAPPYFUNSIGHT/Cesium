@@ -1,0 +1,117 @@
+<!--
+ * #Descripttion 
+ * #Author leigy<760374213@qq.com>
+ * #Date 2020-07-02 10:37:23
+ * #LastEditors leigy<760374213@qq.com>
+ * #LastEditTime 2020-07-02 12:12:05
+ * #Tip 版权所有： 中科空间信息（廊坊）研究院
+ * 注意：本内容仅限于中科空间信息（廊坊）研究院内部传阅，禁止外泄以及用于其他的商业目的。
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Use correct character set. -->
+    <meta charset="utf-8">
+    <!-- Tell IE to use the latest, best version. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>加载kml数据</title>
+
+    <script src="https://cesiumjs.org/releases/1.57/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesiumjs.org/releases/1.57/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+
+    <style>
+        html,
+        body,
+        #cesiumContainer {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .cesium-widget-credits {
+            display: none
+        }
+
+        /**  隐藏版权信息 **/
+        .cesium-viewer .cesium-widget-credits {
+            display: none
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cesiumContainer"></div>
+    <script>
+        Cesium.Ion.defaultAccessToken =
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI4ZmVjNGI2Zi1kMTA3LTQ4NjEtOWY5Mi1hOTQ0NjkwYzM0Y2YiLCJpZCI6NjQyMiwic2NvcGVzIjpbImFzciIsImdjIl0sImlhdCI6MTU0NjQ4MjQzMH0.TmEcQVmerVoMPXZ2_xa9D2Dy5Wysy2j6_tgPeiV88aM'
+
+        var viewer = new Cesium.Viewer('cesiumContainer');
+        // 加载kml数据，更改description信息，多了黄色的标签里面包含的
+
+        var kmlOptions = {
+            camera: viewer.scene.camera,
+            canvas: viewer.scene.canvas,
+            // clampToGround: true
+        };
+        /* viewer.dataSources.add(
+            Cesium.KmlDataSource.load(
+                "./kml/JiangSu_POI13.kml",
+                kmlOptions
+            )
+        ); */
+        // Load geocache points of interest from a KML file
+        // Data from : http://catalog.opendata.city/dataset/pediacities-nyc-neighborhoods/resource/91778048-3c58-449c-a3f9-365ed203e914
+        var geocachePromise = Cesium.KmlDataSource.load(
+            'http://112.82.244.42:18070/geoserver/ksh/wms/kml?layers=ksh:JiangSu_POI', kmlOptions);
+
+        // Add geocache billboard entities to scene and style them
+        geocachePromise.then(function (dataSource) {
+            // Add the new data as entities to the viewer
+            viewer.dataSources.add(dataSource);
+
+            // Get the array of entities
+            var geocacheEntities = dataSource.entities.values;
+            console.log(geocacheEntities)
+            for (var i = 0; i < geocacheEntities.length; i++) {
+                var entity = geocacheEntities[i];
+                console.log(entity.properties)
+                // if (Cesium.defined(entity.billboard)) {
+                // Adjust the vertical origin so pins sit on terrain
+                entity.billboard.verticalOrigin = Cesium.VerticalOrigin.BOTTOM;
+                // Disable the labels to reduce clutter
+                entity.label = {
+                    text: entity.name,
+                    showBackground: true,
+                    scale: 0.6,
+                    horizontalOrigin: Cesium.HorizontalOrigin.CENTER,
+                    verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+                    distanceDisplayCondition: new Cesium.DistanceDisplayCondition(10.0, 8000.0),
+                    disableDepthTestDistance: 100.0
+                };
+                // Add distance display condition
+                entity.billboard.distanceDisplayCondition = new Cesium.DistanceDisplayCondition(10.0,
+                    20000.0);
+                // Compute latitude and longitude in degrees
+                var cartographicPosition = Cesium.Cartographic.fromCartesian(entity.position.getValue(Cesium
+                    .JulianDate.now()));
+                var latitude = Cesium.Math.toDegrees(cartographicPosition.latitude);
+                var longitude = Cesium.Math.toDegrees(cartographicPosition.longitude);
+
+                // Modify description(将信息添加到description描述信息中，我们这里只添加经纬度)
+                var description =
+                    '<table class="cesium-infoBox-defaultTable cesium-infoBox-defaultTable-lighter"><tbody>' +
+                    '<tr><th>' + "Longitude" + '</th><td>' + longitude.toFixed(5) + '</td></tr>' +
+                    '<tr><th>' + "Latitude" + '</th><td>' + latitude.toFixed(5) + '</td></tr>' +
+                    '</tbody></table>';
+                // entity.description = description;
+                // }
+            }
+        });
+    </script>
+</body>

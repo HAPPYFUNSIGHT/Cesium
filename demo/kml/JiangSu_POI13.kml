@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:ns2="http://www.google.com/kml/ext/2.2" xmlns:ns3="http://www.w3.org/2005/Atom" xmlns:ns4="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0">
+    <Document>
+        <Schema name="JiangSu_POI13_1" id="JiangSu_POI13_1">
+            <SimpleField type="string" name="name"/>
+            <SimpleField type="string" name="type"/>
+        </Schema>
+        <Folder>
+            <name>JiangSu_POI13</name>
+            <Placemark id="JiangSu_POI13.1">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">G204立交桥</SimpleData>
+                        <SimpleData name="type">交通设施</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>120.394899892718,32.4916313420679</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.2">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">LG化学</SimpleData>
+                        <SimpleData name="type">其他</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>118.87990788267,32.1606997742462</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.3">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">OYO竹海生态园</SimpleData>
+                        <SimpleData name="type">休闲体育</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>117.126947534223,34.2042963671552</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.4">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">S49分离式立交桥</SimpleData>
+                        <SimpleData name="type">交通设施</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>118.390041144303,33.9576348857808</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.5">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">S半岛清水湾花园</SimpleData>
+                        <SimpleData name="type">商务住宅</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>120.619012849667,31.2427442929098</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.6">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">阿尔卡迪亚国际酒店</SimpleData>
+                        <SimpleData name="type">宾馆</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>118.807496862126,32.3314912890176</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.7">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">阿湖小学</SimpleData>
+                        <SimpleData name="type">科教文化</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>118.604878593383,34.4310721462914</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.8">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">爱景山</SimpleData>
+                        <SimpleData name="type">地名</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>119.038533803025,31.7451985566069</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.9">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">爱乐国际公寓</SimpleData>
+                        <SimpleData name="type">商务住宅</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>120.706195931404,31.6861748826532</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.10">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">爱民花园</SimpleData>
+                        <SimpleData name="type">商务住宅</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>121.173219131744,32.3207158293005</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.11">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">爱园公交车站</SimpleData>
+                        <SimpleData name="type">交通设施</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>118.724194494505,33.9484251198845</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.12">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">安德门</SimpleData>
+                        <SimpleData name="type">地铁站</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>118.756303083248,31.9937956951339</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.13">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">安定小学</SimpleData>
+                        <SimpleData name="type">科教文化</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>120.72146026804,31.6206904027266</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.14">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">安丰初级中学</SimpleData>
+                        <SimpleData name="type">科教文化</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>120.093356028988,33.0810042778504</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.15">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">安丰客运站</SimpleData>
+                        <SimpleData name="type">交通设施</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>120.087170304778,33.0949463217592</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.16">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">安丰客运站</SimpleData>
+                        <SimpleData name="type">交通设施</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>120.402435762049,32.7325937051045</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.17">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">安丰镇小学</SimpleData>
+                        <SimpleData name="type">科教文化</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>120.402091370438,32.7412530827557</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.18">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">安丰镇政府</SimpleData>
+                        <SimpleData name="type">政府机构</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>120.07841206423,33.0996927959364</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.19">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">安峰高级中学</SimpleData>
+                        <SimpleData name="type">科教文化</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>118.755213144614,34.3817721848358</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.20">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">安峰高级中学</SimpleData>
+                        <SimpleData name="type">科教文化</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>118.755213144614,34.3817721848359</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.21">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">安峰山</SimpleData>
+                        <SimpleData name="type">地名</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>118.751437326132,34.3620867031366</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.22">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">安和苑</SimpleData>
+                        <SimpleData name="type">商务住宅</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>117.934617141034,34.3187595379951</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.23">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">安家苑</SimpleData>
+                        <SimpleData name="type">商务住宅</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>119.910053764169,31.910622534148</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.24">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">安家中心小学</SimpleData>
+                        <SimpleData name="type">科教文化</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>119.894937752809,31.917622164951</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.25">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">安澜花苑</SimpleData>
+                        <SimpleData name="type">商务住宅</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>119.13272762474,33.5454250130221</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.26">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">安龙河中桥</SimpleData>
+                        <SimpleData name="type">交通设施</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>120.303591370258,33.3525220900629</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.27">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">安然山</SimpleData>
+                        <SimpleData name="type">地名</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>117.369211197438,34.2912327449392</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.28">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">安镇客运站</SimpleData>
+                        <SimpleData name="type">交通设施</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>120.471020347586,31.6325973967043</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.29">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">鞍湖实验学校</SimpleData>
+                        <SimpleData name="type">科教文化</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>119.989964685218,33.3465813403841</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.30">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">奥邦城</SimpleData>
+                        <SimpleData name="type">商务住宅</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>119.100286815389,34.8285421287952</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.31">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">奥邦大润发广场</SimpleData>
+                        <SimpleData name="type">购物</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>119.441202760239,32.3695598913417</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.32">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">奥邦商业广场</SimpleData>
+                        <SimpleData name="type">购物</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>121.080273092624,32.0758156138778</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.33">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">奥斯博恩庄园</SimpleData>
+                        <SimpleData name="type">商务住宅</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>118.852612198602,31.7974324457678</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.34">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">奥体东</SimpleData>
+                        <SimpleData name="type">地铁站</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>118.723866213746,32.006615884456</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.35">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">奥体中心</SimpleData>
+                        <SimpleData name="type">地铁站</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>118.713063602006,32.0111399533482</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.36">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">澳林购物广场</SimpleData>
+                        <SimpleData name="type">购物</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>118.693688483325,32.1147718765665</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.37">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">八百桥互通主线桥</SimpleData>
+                        <SimpleData name="type">交通设施</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>118.881947497188,32.3983024520779</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.38">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">八佰伴</SimpleData>
+                        <SimpleData name="type">购物</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>118.870876221666,31.3263569986854</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.39">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">八佰伴</SimpleData>
+                        <SimpleData name="type">购物</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>119.562693635773,31.7485423799527</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.40">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">八大家小学分校</SimpleData>
+                        <SimpleData name="type">科教文化</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>120.23814848361,33.9950748888904</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.41">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">八卦洲</SimpleData>
+                        <SimpleData name="type">地名</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>118.820068757711,32.1761615532611</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.42">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">八巨镇中心小学</SimpleData>
+                        <SimpleData name="type">科教文化</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>119.993827917853,34.123756802577</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.43">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">八里小学</SimpleData>
+                        <SimpleData name="type">科教文化</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>117.998006661628,33.912106511891</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.44">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">八路中学</SimpleData>
+                        <SimpleData name="type">科教文化</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>117.912507688662,34.189151526532</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.45">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">八桥互通</SimpleData>
+                        <SimpleData name="type">交通设施</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>119.54333214477,32.6896120838654</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.46">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">八桥客运站</SimpleData>
+                        <SimpleData name="type">交通设施</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>119.579115718024,32.6860509085873</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.47">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">八桥客运站</SimpleData>
+                        <SimpleData name="type">交通设施</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>119.868442782719,32.1022229841746</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.48">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">八士天富广场</SimpleData>
+                        <SimpleData name="type">购物</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>120.384844780116,31.6528031860992</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.49">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">八仙台服务区</SimpleData>
+                        <SimpleData name="type">道路附属设施</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>118.650447876771,32.9219324732281</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="JiangSu_POI13.50">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#JiangSu_POI13_1">
+                        <SimpleData name="name">八义集互通</SimpleData>
+                        <SimpleData name="type">交通设施</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+                <Point>
+                    <coordinates>117.699220707348,34.250168828187</coordinates>
+                </Point>
+            </Placemark>
+        </Folder>
+    </Document>
+</kml>
